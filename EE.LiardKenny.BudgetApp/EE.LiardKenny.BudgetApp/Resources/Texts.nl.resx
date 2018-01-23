@@ -150,4 +150,25 @@
   <data name="DateOfTransaction" xml:space="preserve">
     <value>Datum van transactie :</value>
   </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Bedrag :</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categorie :</value>
+  </data>
+  <data name="CategoryDescription" xml:space="preserve">
+    <value>Categorie beschrijving :</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschrijving :</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Bewaren</value>
+  </data>
+  <data name="NotEmptyErrorMessage" xml:space="preserve">
+    <value>{0} mag niet leeg zijn</value>
+  </data>
+  <data name="NotNegativeErrorMessage" xml:space="preserve">
+    <value>Mag niet negatief zijn</value>
+  </data>
 </root>

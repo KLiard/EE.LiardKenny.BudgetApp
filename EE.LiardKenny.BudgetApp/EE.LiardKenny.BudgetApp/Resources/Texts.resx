@@ -150,4 +150,25 @@
   <data name="DateOfTransaction" xml:space="preserve">
     <value>Date of transaction :</value>
   </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category :</value>
+  </data>
+  <data name="CategoryDescription" xml:space="preserve">
+    <value>Category description :</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description :</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NotEmptyErrorMessage" xml:space="preserve">
+    <value>{0} can't be empty</value>
+  </data>
+  <data name="NotNegativeErrorMessage" xml:space="preserve">
+    <value>Can't be negative</value>
+  </data>
 </root>

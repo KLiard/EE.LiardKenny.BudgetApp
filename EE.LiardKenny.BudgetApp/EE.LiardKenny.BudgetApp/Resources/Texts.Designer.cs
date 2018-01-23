@@ -71,6 +71,15 @@ namespace EE.LiardKenny.BudgetApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount :.
+        /// </summary>
+        internal static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Budg€t App.
         /// </summary>
         internal static string BudgetApp {
@@ -80,11 +89,38 @@ namespace EE.LiardKenny.BudgetApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Category :.
+        /// </summary>
+        internal static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category description :.
+        /// </summary>
+        internal static string CategoryDescription {
+            get {
+                return ResourceManager.GetString("CategoryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date of transaction :.
         /// </summary>
         internal static string DateOfTransaction {
             get {
                 return ResourceManager.GetString("DateOfTransaction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description :.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
@@ -125,6 +161,24 @@ namespace EE.LiardKenny.BudgetApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} can&apos;t be empty.
+        /// </summary>
+        internal static string NotEmptyErrorMessage {
+            get {
+                return ResourceManager.GetString("NotEmptyErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t be negative.
+        /// </summary>
+        internal static string NotNegativeErrorMessage {
+            get {
+                return ResourceManager.GetString("NotNegativeErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Outcome :.
         /// </summary>
         internal static string Outcome {
@@ -139,6 +193,15 @@ namespace EE.LiardKenny.BudgetApp.Resources {
         internal static string Outcoming {
             get {
                 return ResourceManager.GetString("Outcoming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         

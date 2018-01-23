@@ -1,5 +1,7 @@
 ﻿using EE.LiardKenny.BudgetApp.Services;
 using EE.LiardKenny.BudgetApp.Services.Contracts;
+using EE.LiardKenny.BudgetApp.Validators;
+using FluentValidation;
 using FreshMvvm;
 
 namespace EE.LiardKenny.BudgetApp.IOC
@@ -10,6 +12,7 @@ namespace EE.LiardKenny.BudgetApp.IOC
         {
             FreshIOC.Container.Register<IBudgetDataService, InMemoryBudgetDataService>();
             FreshIOC.Container.Register<ICalculatorService, CalculatorService>();
+            FreshIOC.Container.Register<IValidator, CashFlowValidator>();
         }
     }
 }

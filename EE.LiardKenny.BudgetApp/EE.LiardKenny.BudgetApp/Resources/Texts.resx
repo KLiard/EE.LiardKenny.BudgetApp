@@ -166,7 +166,7 @@
     <value>Save</value>
   </data>
   <data name="NotEmptyErrorMessage" xml:space="preserve">
-    <value>{0} can't be empty</value>
+    <value>Can't be empty</value>
   </data>
   <data name="NotNegativeErrorMessage" xml:space="preserve">
     <value>Can't be negative</value>

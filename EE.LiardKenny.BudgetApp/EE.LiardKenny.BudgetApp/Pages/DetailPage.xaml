@@ -28,51 +28,57 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label Text="{resources:Translate DateOfTransaction}"
                        VerticalOptions="Center" />
                 <DatePicker Date="{Binding DateOfTransaction}"
                             Grid.Column="1" />
+                <Label Text="{Binding AmountErrorMessage}"
+                       VerticalOptions="Center"
+                       IsVisible="{Binding AmountErrorIsVisible}"
+                       TextColor="Red"
+                       Grid.Row="1" />
                 <Label Text="{resources:Translate Amount}"
                        VerticalOptions="Center"
-                       Grid.Row="1" />
+                       Grid.Row="2" />
                 <Entry Text="{Binding Amount}"
                        VerticalOptions="Center"
                        Grid.Column="1"
-                       Grid.Row="1" />
+                       Grid.Row="2" />
                 <Label Text="{resources:Translate Category}"
                        VerticalOptions="Center"
-                       Grid.Row="2" />
+                       Grid.Row="3" />
                 <Picker ItemsSource="{Binding Categories}"
                         SelectedItem="{Binding Category}"
                         ItemDisplayBinding="{Binding Name}"
                         VerticalOptions="Center"
                         Grid.Column="1"
-                        Grid.Row="2" />
+                        Grid.Row="3" />
                 <Label Text="{resources:Translate CategoryDescription}"
                        VerticalOptions="Center"
-                       Grid.Row="3" />
+                       Grid.Row="4" />
                 <Label Text="{Binding Category.Description}"
                        VerticalTextAlignment="Center"
                        Grid.Column="1"
-                       Grid.Row="3" />
+                       Grid.Row="4" />
                 <Label Text="{resources:Translate Description}"
                        VerticalOptions="Center"
-                       Grid.Row="4" />
+                       Grid.Row="5" />
                 <Editor Text="{Binding Description}"
                         VerticalOptions="Center"
                         WidthRequest="70"
                         HeightRequest="150"
                         Grid.Column="1"
-                        Grid.Row="4" />
+                        Grid.Row="5" />
                 <Button Text="{resources:Translate Save}"
                         Command="{Binding SaveCommand}"
-                        Grid.Row="5" />
+                        Grid.Row="6" />
                 <Button Text="{Binding CashFlowDirection}"
                         Command="{Binding SetIsIncomeCommand}"
                         BackgroundColor="{Binding IsIncome, Converter={StaticResource BoolToColorConverter}}"
                         Grid.Column="1"
-                        Grid.Row="5" />
+                        Grid.Row="6" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -166,7 +166,7 @@
     <value>Bewaren</value>
   </data>
   <data name="NotEmptyErrorMessage" xml:space="preserve">
-    <value>{0} mag niet leeg zijn</value>
+    <value>Mag niet leeg zijn</value>
   </data>
   <data name="NotNegativeErrorMessage" xml:space="preserve">
     <value>Mag niet negatief zijn</value>

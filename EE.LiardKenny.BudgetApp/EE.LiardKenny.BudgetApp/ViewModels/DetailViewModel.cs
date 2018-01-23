@@ -1,5 +1,6 @@
 ﻿using EE.LiardKenny.BudgetApp.Models;
 using EE.LiardKenny.BudgetApp.Resources;
+using EE.LiardKenny.BudgetApp.Services.Contracts;
 using FluentValidation;
 using FreshMvvm;
 using System;
@@ -17,6 +18,7 @@ namespace EE.LiardKenny.BudgetApp.ViewModels
     {
         private CashFlow _currentCashFlow;
         private readonly IValidator _validator;
+        private readonly IBudgetDataService _budgetDataService;
 
         public bool IsCreate { get; set; }
 
@@ -114,7 +116,13 @@ namespace EE.LiardKenny.BudgetApp.ViewModels
             {
                 SaveData();
 
-                Validate(_currentCashFlow);
+                if(Validate(_currentCashFlow))
+                {
+                    if(_budgetDataService.SaveTransaction(_currentCashFlow))
+                    {
+                        CoreMethods.PopPageModel(_currentCashFlow);
+                    }
+                }
             });
 
         public ICommand SetIsIncomeCommand => new Command(
@@ -125,9 +133,12 @@ namespace EE.LiardKenny.BudgetApp.ViewModels
                 RaisePropertyChanged(nameof(CashFlow.CashFlowDirection));
             });
 
-        public DetailViewModel(IValidator validator)
+        public DetailViewModel(IValidator validator, IBudgetDataService budgetDataService)
         {
             _validator = validator;
+            _budgetDataService = budgetDataService;
+
+            Categories = _budgetDataService.GetCategories().ToList();
 
             if (Categories == null)
             {

@@ -76,7 +76,7 @@ namespace EE.LiardKenny.BudgetApp.ViewModels
 
         private decimal CalculateInAndOutcome(bool isIncome)
         {
-            Transactions = _budgetDataService.Get(DateFrom, DateTo).ToObservableCollection();
+            Transactions = _budgetDataService.GetTransactions(DateFrom, DateTo)?.ToObservableCollection() ?? new ObservableCollection<CashFlow>();
 
             return _calculatorService.CalculateTotal(Transactions, isIncome);
         }
@@ -86,6 +86,15 @@ namespace EE.LiardKenny.BudgetApp.ViewModels
             RaisePropertyChanged(nameof(Income));
             RaisePropertyChanged(nameof(Outcome));
             RaisePropertyChanged(nameof(Total));
+        }
+
+        public override void ReverseInit(object returnedData)
+        {
+            base.ReverseInit(returnedData);
+
+            var cashFlow = returnedData as CashFlow;
+
+            //Transactions.Add(cashFlow);
         }
     }
 }

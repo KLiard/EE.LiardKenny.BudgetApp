@@ -161,7 +161,7 @@ namespace EE.LiardKenny.BudgetApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} can&apos;t be empty.
+        ///   Looks up a localized string similar to Can&apos;t be empty.
         /// </summary>
         internal static string NotEmptyErrorMessage {
             get {
